@@ -1,0 +1,30 @@
+select   concat(
+':',
+lower(column_name)
+)
+
+from information_schema.columns 
+
+where table_name='TABLE_TEST_1' and table_schema='hao'
+
+
+
+select   concat(
+'private ',
+(case   when lower(data_type)='varchar' then 'String'
+ when lower(data_type)='date' then 'Date'
+ else  'not'
+end),' ',
+lower(column_name),
+';'
+)
+
+from information_schema.columns 
+
+where table_name='TABLE_TEST_1' and table_schema='hao'
+
+
+
+
+nopapad++替换 _\w  替换   \U$0
+_替换为空
